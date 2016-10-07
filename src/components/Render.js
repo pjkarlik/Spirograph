@@ -52,9 +52,9 @@ export default class Render {
   resetCircle() {
     this.lastPosition = null;
     this.parentRadius = ~~(Math.min(this.width, this.height) / 2) - 250;
-    this.baseSub = 15;
+    this.baseSub = 225;
     this.subRadius = -this.baseSub;
-    this.drawArm = 100;
+    this.drawArm = 50;
     this.arc = this.parentRadius + this.drawArm;
     this.delta = 4 / this.arc;
     this.theta = 0;
@@ -79,9 +79,9 @@ export default class Render {
 
     this.lastPosition = position;
     this.theta += this.delta;
-    this.theta %= 12 * Math.PI;
+    // this.theta %= 12 * Math.PI;
     this.phi += (this.parentRadius / this.subRadius) * this.delta;
-    // this.phi %= 2 * Math.PI;
+    this.phi %= 2 * Math.PI;
 
     this.animation = window.requestAnimationFrame(this.renderLoop);
   }
