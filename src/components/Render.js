@@ -79,7 +79,7 @@ export default class Render {
 
     this.lastPosition = position;
     this.theta += this.delta;
-    // this.theta %= 12 * Math.PI;
+    this.theta %= 12 * Math.PI;
     this.phi += (this.parentRadius / this.subRadius) * this.delta;
     this.phi %= 2 * Math.PI;
 
