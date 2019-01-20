@@ -13,11 +13,11 @@
   * Initial Commit - Basic formula found online.
 
 ## Run the example
-  Requires Node v6.2.1 or greater
+  Requires Node v9.0 or greater
 
 ```bash
 $ npm install
-$ npm run dev & open http://localhost:8080
+$ npm run dev & open http://localhost:2020
 ```
 
 ## License
